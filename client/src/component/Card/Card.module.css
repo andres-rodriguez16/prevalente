@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.card {
+  Width: 552px ;
+  Height: 330px;
+  background-color:#FFFFFF;
+  border: 1px solid transparent;
+  margin: 0 0 40px 0;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgb(211, 205, 205);
+}
+
+.card1 {
+  Width: 552px ;
+  Height: 330px;
+  background-color:#FFFFFF;
+  border: 1px solid transparent;
+  margin: 0 40px 40px 0;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgb(211, 205, 205);
+}

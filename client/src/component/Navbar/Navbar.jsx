@@ -12,7 +12,7 @@ function Navbar() {
       <nav className={s.nav}>
         <section className={s.container__logo}>
           <img className={s.logo} src={logo} alt='' />
-          <h3>Gente Prevalente</h3>
+          <h3>Gente PreValente</h3>
         </section>
         <label className={s.bucardor}>
           <HiSearch className={s.lupa} />
@@ -20,7 +20,7 @@ function Navbar() {
         </label>
         <ul>
           <li className={s.ad}>
-            <img src={ad} alt='' /> Adminitración
+            <img src={ad} alt='' /> Administración
           </li>
           <li className={s.empleo}>
             <img src={empleo} alt='' />
