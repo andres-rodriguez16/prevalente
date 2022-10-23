@@ -1,25 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@300;400;700&display=swap');
+
 .container {
   display: flex;
   justify-content: center;
   margin-top: 80px;
+  width: 100%;
+  flex-wrap: wrap;
+  transition: all 500ms ease-in;
 }
 
 .card {
-  Width: 552px ;
-  Height: 330px;
-  background-color:#FFFFFF;
+  width: 40%;
+  height: 330px;
+  background-color: #FFFFFF;
   border: 1px solid transparent;
-  margin: 0 0 40px 0;
+  margin: 0 40px 100px 0;
   border-radius: 16px;
   box-shadow: 4px 4px 4px rgb(211, 205, 205);
 }
 
-.card1 {
-  Width: 552px ;
-  Height: 330px;
-  background-color:#FFFFFF;
-  border: 1px solid transparent;
-  margin: 0 40px 40px 0;
-  border-radius: 16px;
-  box-shadow: 4px 4px 4px rgb(211, 205, 205);
+.card .icon {
+  Width: 107.78px;
+  height: 115px;
+  background-color: rgba(38, 180, 255, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: 15%;
+  left: 9%;
+}
+
+.card h3 {
+  font-size: 36px;
+  margin-top: 115px;
+  margin-left: 27.18px;
+  color: rgba(66, 66, 66, 1);
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.card footer {
+  width: 100%;
+  height: 10vh;
+  margin-top: 40px;
+  border-top: 1px solid rgba(203, 206, 221, 1);
+}
+
+.icon img {
+  margin: 20px auto;
+}
+
+.card .footer__1 {
+  width: 100%;
+  height: 10vh;
+  margin-top: 93px;
+  border-top: 1px solid rgba(203, 206, 221, 1);
+}
+
+.icon1 {
+  Width: 107.78px;
+  height: 115px;
+  background-color: rgba(38, 180, 255, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: 15%;
+  left: 52%;
+}
+
+.icon1 img {
+  margin: 30px auto;
+}
+
+.icon2 {
+  Width: 107.78px;
+  height: 115px;
+  background-color: rgba(38, 180, 255, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: 77%;
+  left: 9%;
+}
+
+.icon2 img {
+  margin: 20px auto;
+}
+
+.icon3 {
+  Width: 107.78px;
+  height: 115px;
+  background-color: rgba(38, 180, 255, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: 77%;
+  left: 52%;
+}
+
+.card .footer__2 {
+  width: 100%;
+  height: 10vh;
+  margin-top: 93px;
+  border-top: 1px solid rgba(203, 206, 221, 1);
+}
+footer {
+  display: flex;
+}
+footer p {
+  font-size: 10px;
+  font-family: "Roboto";
+  color: rgba(154, 154, 154, 1);
+  margin: auto 10px;
+}
+footer img {
+  height: 19.38px;
+  width: 18.29px;
+  margin: auto 0 auto 27px;
+}
+
+.icon3 img {
+  margin: 30px 7px;
+}
+
+@media (max-width:800px) {
+  .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 90%;
+  }
 }
