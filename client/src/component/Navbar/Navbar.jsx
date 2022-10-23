@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../../Screenshot_1.png';
-import empleo from '../../cv.png';
-import cv from '../../cv2.png';
-import ad from '../../Administración.png';
+import logo from '../.././image/Screenshot_1.png';
+import empleo from '../.././image/cv.png';
+import cv from '../.././image/cv2.png'; 
+import ad from '../.././image/Administración.png';
 import s from './Navbar.module.css';
 import { HiSearch } from 'react-icons/hi';
 

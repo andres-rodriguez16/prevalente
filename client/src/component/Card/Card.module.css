@@ -19,6 +19,61 @@
   box-shadow: 4px 4px 4px rgb(211, 205, 205);
 }
 
+.card1 {
+  width: 100%;
+  height: 330px;
+  background-color: #FFFFFF;
+  border: 1px solid transparent;
+  margin: 0 40px 100px 0;
+  border-radius: 16px;
+  box-shadow: 4px 4px 4px rgb(211, 205, 205);
+}
+
+a {
+  width: 40%;
+  height:330px;
+  margin-right: 40px;
+}
+
+.card1 .icon {
+  Width: 107.78px;
+  height: 115px;
+  background-color: rgba(38, 180, 255, 1);
+  border-radius: 8px;
+  position: absolute;
+  top: 15%;
+  left: 9%;
+}
+
+.card1 h3 {
+  font-size: 36px;
+  margin-top: 115px;
+  margin-left: 27.18px;
+  color: rgba(66, 66, 66, 1);
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.card1 footer {
+  width: 100%;
+  height: 10vh;
+  margin-top: 40px;
+  border-top: 1px solid rgba(203, 206, 221, 1);
+}
+
+.card1 footer p {
+  font-size: 10px;
+  font-family: "Roboto";
+  color: rgba(154, 154, 154, 1);
+  margin: auto 10px;
+}
+
+.card1 footer img {
+  height: 19.38px;
+  width: 18.29px;
+  margin: auto 0 auto 27px;
+}
+
 .card .icon {
   Width: 107.78px;
   height: 115px;
@@ -100,15 +155,18 @@
   margin-top: 93px;
   border-top: 1px solid rgba(203, 206, 221, 1);
 }
+
 footer {
   display: flex;
 }
+
 footer p {
   font-size: 10px;
   font-family: "Roboto";
   color: rgba(154, 154, 154, 1);
   margin: auto 10px;
 }
+
 footer img {
   height: 19.38px;
   width: 18.29px;
@@ -120,11 +178,16 @@ footer img {
 }
 
 @media (max-width:800px) {
+
   .container {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-
+  a {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
   .card {
     margin: 0 auto;
     margin-bottom: 2rem;

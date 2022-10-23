@@ -1,29 +1,32 @@
 import React from 'react';
 import s from './Card.module.css';
-import e from './../../empresa.png';
-import i from './../../indicadores.png';
-import p from '../../persona.png';
-import confi from '../../confi.png';
-import reloj from '../../reloj.png';
+import e from './../.././image/empresa.png';
+import i from './../.././image/indicadores.png';
+import p from '../.././image/persona.png';
+import confi from '../.././image/confi.png';
+import reloj from '../.././image/reloj.png';
+import { Link } from 'react-router-dom';
 
 function Card() {
   return (
     <main className={s.container}>
-      <div className={s.card}>
-        <section className={s.icon}>
-          <img src={e} alt='' />
-        </section>
-        <h3>
-          Solicitudes de creación <br />
-          de empresas
-        </h3>
-        <footer>
-          <img src={reloj} alt='' />
-          <p>
-            2 solicitudes sin <br /> tratar
-          </p>
-        </footer>
-      </div>
+      <Link to='/empresas'>
+        <div className={s.card1}>
+          <section className={s.icon}>
+            <img src={e} alt='' />
+          </section>
+          <h3>
+            Solicitudes de creación <br />
+            de empresas
+          </h3>
+          <footer>
+            <img src={reloj} alt='' />
+            <p>
+              2 solicitudes sin <br /> tratar
+            </p>
+          </footer>
+        </div>
+      </Link>
       <div className={s.card}>
         <section className={s.icon1}>
           <img src={i} alt='' />
@@ -32,7 +35,7 @@ function Card() {
         <footer className={s.footer__1}>
           <img src={reloj} alt='' />
           <p>
-          Visitado por última vez: <br /> 31/01/2020
+            Visitado por última vez: <br /> 31/01/2020
           </p>
         </footer>
       </div>
