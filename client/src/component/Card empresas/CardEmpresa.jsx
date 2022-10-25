@@ -5,7 +5,11 @@ import s from './CardEmpresa.module.css';
 import pdf from '../../image/buttonPdf.png';
 import aprobar from '../../image/aceptar.png';
 import r from '../../image/rechazar.png';
-import { aprobacionDeEmpresa, RechazoDeEmpresa, openModal } from '../../Redux/actions';
+import {
+  aprobacionDeEmpresa,
+  RechazoDeEmpresa,
+  openModal,
+} from '../../Redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal/Modal';
 function CardEmpresa({
@@ -19,7 +23,6 @@ function CardEmpresa({
   aprobada,
   rechazada,
 }) {
-  const [openModal, setOpenModal] = useState(false)
   const Dispatch = useDispatch();
   const aceptar = () => {
     const booleano = new Boolean(true);
@@ -36,6 +39,10 @@ function CardEmpresa({
   const aprobacion = 'Aprobada';
   const rechazo = 'rechazada';
 
+  const modal = useSelector(state => state.modal);
+  const handleSutmit = () => {
+    Dispatch(openModal());
+  };
   return (
     <main>
       <section className={s.ruta}>
@@ -97,16 +104,16 @@ function CardEmpresa({
             <hr />
           </section>
           <section>
-            <button>
+            <button onClick={handleSutmit}>
               <img src={pdf} alt='' /> Ver archivos adjuntos
             </button>
           </section>
         </div>
       </div>
-      <Modal 
-      openModal={openModal}
-      setOpenModal={setOpenModal}
-      />
+      {modal ? (
+        <div className='opacity-25 fixed inset-0 z-10 bg-black'></div>
+      ) : null} 
+      <Modal />
     </main>
   );
 }

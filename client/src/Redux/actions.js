@@ -2,6 +2,8 @@ import axios from 'axios';
 
 export const GET__EMPRESAS = "GET_VIDEOGAMES";
 export const OPEN_MODAL = "OPEN_MODAL"
+export const CLOSE_MODAL = "CLOSE_MODAL"
+
 export function getEmpresas() {
   return async function (dispatch) {
     try {
@@ -42,6 +44,15 @@ export function openModal() {
     dispatch({
       type: OPEN_MODAL,
       payload: true
+    })
+  }
+}
+
+export function closeModal() {
+  return async function (dispatch) {
+    dispatch({
+      type: CLOSE_MODAL,
+      payload: false
     })
   }
 }
