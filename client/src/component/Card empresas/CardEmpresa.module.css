@@ -28,6 +28,22 @@
   justify-content: center;
 }
 
+.button__action p {
+  margin: 0 auto;
+}
+.respuesta__rechazo {
+  border-radius: 5px;
+  border: 1px solid red;
+  padding: 10px;
+  color: red;
+}
+.respuesta__aprobacion {
+  border-radius: 5px;
+  border: 1px solid green;
+  padding: 10px;
+  color: green;
+}
+
 .button__action {
   display: flex;
   flex-direction: column;

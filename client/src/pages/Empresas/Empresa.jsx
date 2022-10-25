@@ -14,7 +14,7 @@ function Empresa() {
   const indeceUltimaEmpresa = actualPage * empresaPorPagina;
   const indeceDelPrimero = indeceUltimaEmpresa - empresaPorPagina;
   const actualEmpresa = empresa?.slice(indeceDelPrimero, indeceUltimaEmpresa);
-  const [totalDeEmpresa, settotalDeEmpresa] = useState(5);
+  const [totalDeEmpresa, settotalDeEmpresa] = useState(4);
   const nextPag = () => {
     setActualPage(actualPage + 1);
     settotalDeEmpresa(totalDeEmpresa - 1);
@@ -27,9 +27,10 @@ function Empresa() {
   useEffect(() => {
     dispatch(getEmpresas());
   }, [dispatch]);
-
+  
   return (
     <main>
+      {console.log(actualEmpresa[0])}
       {actualEmpresa?.map(e => (
         <CardEmpresa
           key={e.id}
@@ -39,6 +40,9 @@ function Empresa() {
           razonSocial={e.razonSocial}
           nit={e.nit}
           logo={e.logo}
+          id={e.id}
+          aprobada={e.aprobada}
+          rechazada={e.rechazada}
         />
       ))}
       <Paginado
