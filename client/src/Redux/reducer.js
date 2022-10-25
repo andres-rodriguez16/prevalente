@@ -1,13 +1,17 @@
+import { GET__EMPRESAS } from "./actions";
 
 const initialState = {
-  videoGames: [],
-  videoGameDetails: {},
-  genres: [],
-  videoGamesFilter: []
+  empresas: [],
+  
 };
 
 function reducerEmpresa(state = initialState, action) {
-
+  if (action.type === GET__EMPRESAS) {
+    return {
+      ...state,
+      empresas : action.payload
+    }
+  }
   return state
 }
 
