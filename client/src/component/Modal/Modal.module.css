@@ -1,0 +1,105 @@
+.one {
+  display: flex;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 533px;
+  height: 572px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px auto 0 auto;
+}
+
+.modal .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.modal .container .one p{
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 20px 0 0 73px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.close {
+  display: flex;
+  justify-content: end;
+  font-size:24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 95%;
+  top: 10px;
+}
+.one___rut  {
+  display: flex;
+  margin: 10px 0;
+  margin: 20px 0 20px 73px;
+}
+.one___rut p {
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+.icono {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto;
+}
+
+.icono__one {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto auto auto 120px;
+}
+
+.icono__two {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto auto auto 111px;
+}
+
+.icono__three {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto auto auto 111px;
+}
+
+.icono__four {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto auto auto 104px;
+}
+
+.icono__five {
+  height: 40px;
+  width: 30px;
+  color: rgba(229, 0, 0, 1);
+  margin: auto auto auto 152px;
+}
+

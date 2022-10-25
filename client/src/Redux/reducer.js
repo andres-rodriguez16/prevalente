@@ -1,8 +1,8 @@
-import { GET__EMPRESAS } from "./actions";
+import { GET__EMPRESAS, OPEN_MODAL } from "./actions";
 
 const initialState = {
   empresas: [],
-  
+  modal : false
 };
 
 function reducerEmpresa(state = initialState, action) {
@@ -10,6 +10,12 @@ function reducerEmpresa(state = initialState, action) {
     return {
       ...state,
       empresas : action.payload
+    }
+  }
+  if (action.type === OPEN_MODAL) {
+    return {
+      ...state,
+      modal : true
     }
   }
   return state
