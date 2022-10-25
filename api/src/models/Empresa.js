@@ -10,8 +10,8 @@ module.exports = (sequelize) => {
       allowNull: false,
       primaryKey: true
     },
-    identificacion : {
-      type: DataTypes.INTEGER
+    identificacion: {
+      type: DataTypes.BIGINT
     },
     nit: {
       type: DataTypes.STRING,
@@ -21,15 +21,25 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    empleados : {
+    empleados: {
       type: DataTypes.INTEGER
     },
     razonSocial: {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    logo : {
-      type : DataTypes.TEXT
+    logo: {
+      type: DataTypes.TEXT
+    },
+    aprobada: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false,
+    },
+    rechazada : {
+      type : DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false,
     }
   },
     {

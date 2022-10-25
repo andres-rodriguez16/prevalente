@@ -1,12 +1,17 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-new-wrappers */
-import React from 'react';
+import React, { useState } from 'react';
 import s from './CardEmpresa.module.css';
 import pdf from '../../image/buttonPdf.png';
 import aprobar from '../../image/aceptar.png';
 import r from '../../image/rechazar.png';
-import { aprobacionDeEmpresa, RechazoDeEmpresa } from '../../Redux/actions';
-import { useDispatch } from 'react-redux';
+import {
+  aprobacionDeEmpresa,
+  RechazoDeEmpresa,
+  openModal,
+} from '../../Redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import Modal from '../Modal/Modal';
 function CardEmpresa({
   identificacion,
   nit,
@@ -22,18 +27,22 @@ function CardEmpresa({
   const aceptar = () => {
     const booleano = new Boolean(true);
     Dispatch(aprobacionDeEmpresa(id, booleano));
-    alert("empresa aprobada exitosamente")
+    alert('empresa aprobada exitosamente');
     location.reload();
   };
   const rechazar = () => {
     const booleano = new Boolean(true);
     Dispatch(RechazoDeEmpresa(id, booleano));
-    alert("empresa Rechazada exitosamente")
+    alert('empresa Rechazada exitosamente');
     location.reload();
   };
   const aprobacion = 'Aprobada';
   const rechazo = 'rechazada';
 
+  const modal = useSelector(state => state.modal);
+  const handleSutmit = () => {
+    Dispatch(openModal());
+  };
   return (
     <main>
       <section className={s.ruta}>
@@ -64,7 +73,6 @@ function CardEmpresa({
             )}
           </div>
         </div>
-
         <div className={s.column__one}>
           <section className={s.section}>
             <p className={s.title}>Nombre de la empresa</p>
@@ -96,12 +104,16 @@ function CardEmpresa({
             <hr />
           </section>
           <section>
-            <button>
+            <button onClick={handleSutmit}>
               <img src={pdf} alt='' /> Ver archivos adjuntos
             </button>
           </section>
         </div>
       </div>
+      {modal ? (
+        <div className='opacity-25 fixed inset-0 z-10 bg-black'></div>
+      ) : null} 
+      <Modal />
     </main>
   );
 }

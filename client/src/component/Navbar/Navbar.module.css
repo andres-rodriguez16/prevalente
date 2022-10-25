@@ -117,6 +117,8 @@ ul li select {
 }
 
 
-@media (min-width: 400px) {
-
+@media (max-width: 400px) {
+  nav ul {
+    display: none;
+  }
 }
