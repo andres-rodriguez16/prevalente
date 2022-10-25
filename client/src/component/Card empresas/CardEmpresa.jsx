@@ -52,7 +52,7 @@ function CardEmpresa({
             <hr />
           </section>
           <section>
-            <p className={s.title}>identificación</p>
+            <p className={s.title}>Identificación</p>
             <p className={s.name}>{identificacion}</p>
             <hr />
           </section>

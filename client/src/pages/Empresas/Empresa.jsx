@@ -13,19 +13,16 @@ function Empresa() {
   const [empresaPorPagina, setEmpresaPorPagina] = useState(1);
   const indeceUltimaEmpresa = actualPage * empresaPorPagina;
   const indeceDelPrimero = indeceUltimaEmpresa - empresaPorPagina;
-
   const actualEmpresa = empresa?.slice(indeceDelPrimero, indeceUltimaEmpresa);
-
-  const paginado = numeroDePaginada => {
-    setActualPage(numeroDePaginada);
+  const [totalDeEmpresa, settotalDeEmpresa] = useState(5);
+  const nextPag = () => {
+    setActualPage(actualPage + 1);
+    settotalDeEmpresa(totalDeEmpresa - 1);
   };
-  
-  const nextPag = function () {
-    setActualPage(actualPage + 1)
-}
-const previusPag = function () {
-  setActualPage(actualPage - 1)
-}
+  const previusPag = () => {
+    setActualPage(actualPage - 1);
+    settotalDeEmpresa(totalDeEmpresa + 1);
+  };
 
   useEffect(() => {
     dispatch(getEmpresas());
@@ -45,9 +42,12 @@ const previusPag = function () {
         />
       ))}
       <Paginado
+        empresas={empresa.length}
+        empresaPorPagina={empresaPorPagina}
         actualPage={actualPage}
         nextPag={nextPag}
         previusPag={previusPag}
+        page={totalDeEmpresa}
       />
     </main>
   );
