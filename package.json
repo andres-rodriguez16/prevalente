@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "nodemon": "^2.0.20",
     "react-icon": "^1.0.0",
     "react-icons": "^4.6.0"
   }
