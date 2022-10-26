@@ -20,3 +20,9 @@ frontend
 ### Celulares
 
 [![movil.png](https://i.postimg.cc/NMt0GrqY/movil.png)](https://postimg.cc/Y4X7b0Cy)
+
+
+#### Botones con funcionalidades, al momento de precionar cualquier boton, se modifica la propienda en la base de datos 
+y se renderiza dependiendo de cual fue la acción
+
+[![rechazo.png](https://i.postimg.cc/zvszMLk9/rechazo.png)](https://postimg.cc/4H1RHxq5)
