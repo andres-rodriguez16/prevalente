@@ -21,7 +21,7 @@ export function getEmpresas() {
 export function aprobacionDeEmpresa(id, payload) {
   return async function () {
     try {
-      const response = await axios.put(`Empresa/aprobada/${id}?booleano=${payload}`,)
+      await axios.put(`Empresa/aprobada/${id}?booleano=${payload}`,)
     } catch (error) {
       throw error
     }
