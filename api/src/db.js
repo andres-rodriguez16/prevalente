@@ -7,34 +7,33 @@ const {
   DB_USER, DB_PASSWORD, DB_HOST, PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD
 } = process.env;
 
-const sequelize =
-process.env.NODE_ENV === "production"
-? new Sequelize({
-    database: PGDATABASE,
-    dialect: "postgres",
-    host: PGHOST,
-    port: PGPORT,
-    username: PGUSER,
-    password: PGPASSWORD,
-    pool: {
-      max: 3,
-      min: 1,
-      idle: 10000,
-    },
-    dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false,
+let sequelize =
+  process.env.NODE_ENV === "production"
+    ? new Sequelize({
+      database: DB_NAME,
+      dialect: "postgres",
+      host: DB_HOST,
+      port: 5432,
+      username: DB_USER,
+      password: DB_PASSWORD,
+      pool: {
+        max: 3,
+        min: 1,
+        idle: 10000,
       },
-      keepAlive: true,
-    },
-    ssl: true,
-  })
-    :
-    new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/revelente`, {
-      logging: false,
-      native: false,
-    });
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false,
+        },
+        keepAlive: true,
+      },
+      ssl: true,
+    })
+    : new Sequelize(
+      `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/revelente`,
+      { logging: false, native: false }
+    );
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
@@ -56,7 +55,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
 empresa(sequelize)
-const {Empresa} = sequelize.models
+const { Empresa } = sequelize.models
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
