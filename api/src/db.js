@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const empresa = require("./models/Empresa")
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, PGDATABASE, PGHOST, PGPORT, PGUSER, PGPASSWORD
+  DB_USER, DB_PASSWORD, DB_HOST, DB_NAME
 } = process.env;
 
 let sequelize =
