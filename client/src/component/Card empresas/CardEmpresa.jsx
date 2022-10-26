@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-new-wrappers */
-import React, { useState } from 'react';
+import React from 'react';
 import s from './CardEmpresa.module.css';
 import pdf from '../../image/buttonPdf.png';
 import aprobar from '../../image/aceptar.png';

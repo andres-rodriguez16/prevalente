@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import s from './Empresa.module.css';
 import { getEmpresas } from '../../Redux/actions';
 import { useSelector, useDispatch } from 'react-redux';
 import CardEmpresa from '../../component/Card empresas/CardEmpresa';
@@ -10,7 +9,7 @@ function Empresa() {
   const dispatch = useDispatch();
 
   const [actualPage, setActualPage] = useState(1);
-  const [empresaPorPagina, setEmpresaPorPagina] = useState(1);
+  const [empresaPorPagina] = useState(1);
   const indeceUltimaEmpresa = actualPage * empresaPorPagina;
   const indeceDelPrimero = indeceUltimaEmpresa - empresaPorPagina;
   const actualEmpresa = empresa?.slice(indeceDelPrimero, indeceUltimaEmpresa);

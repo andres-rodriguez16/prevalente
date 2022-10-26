@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+ /* eslint-disable-next-line */
+ 
+import React from 'react';
 import s from './Modal.module.css';
 import { FaFilePdf } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
