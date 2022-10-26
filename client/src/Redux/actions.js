@@ -7,7 +7,7 @@ export const CLOSE_MODAL = "CLOSE_MODAL"
 export function getEmpresas() {
   return async function (dispatch) {
     try {
-      const response = await axios("http://localhost:3001/Empresa")
+      const response = await axios("/Empresa")
       dispatch({
         type: GET__EMPRESAS,
         payload: response.data
@@ -21,7 +21,7 @@ export function getEmpresas() {
 export function aprobacionDeEmpresa(id, payload) {
   return async function () {
     try {
-      const response = await axios.put(`http://localhost:3001/Empresa/aprobada/${id}?booleano=${payload}`,)
+      const response = await axios.put(`/Empresa/aprobada/${id}?booleano=${payload}`,)
     } catch (error) {
       throw error
     }
@@ -31,7 +31,7 @@ export function aprobacionDeEmpresa(id, payload) {
 export function RechazoDeEmpresa(id, payload) {
   return async function () {
     try {
-      const response = await axios.put(`http://localhost:3001/Empresa/rechazada/${id}?booleano=${payload}`,)
+      const response = await axios.put(`/Empresa/rechazada/${id}?booleano=${payload}`,)
       console.log(response);
     } catch (error) {
       throw error
