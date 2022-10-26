@@ -41,8 +41,8 @@ a {
   background-color: rgba(38, 180, 255, 1);
   border-radius: 8px;
   position: absolute;
-  top: 15%;
-  left: 9%;
+  margin-left: 25px;
+  margin-top: -35px;
 }
 
 .card1 h3 {
@@ -80,8 +80,8 @@ a {
   background-color: rgba(38, 180, 255, 1);
   border-radius: 8px;
   position: absolute;
-  top: 15%;
-  left: 9%;
+  margin-left: 25px;
+  margin-top: -35px;
 }
 
 .card h3 {
@@ -117,8 +117,8 @@ a {
   background-color: rgba(38, 180, 255, 1);
   border-radius: 8px;
   position: absolute;
-  top: 15%;
-  left: 52%;
+  margin-left: 25px;
+  margin-top: -35px;
 }
 
 .icon1 img {
@@ -152,7 +152,7 @@ a {
 .card .footer__2 {
   width: 100%;
   height: 10vh;
-  margin-top: 93px;
+  margin-top: 18%;
   border-top: 1px solid rgba(203, 206, 221, 1);
 }
 
@@ -178,7 +178,6 @@ footer img {
 }
 
 @media (max-width:800px) {
-
   .container {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -186,11 +185,33 @@ footer img {
   a {
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 80px;
   }
   .card {
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 80px;
     width: 90%;
   }
+}
+
+@media (max-width:400px) {
+  .card .footer__2 {
+    margin-top: 10%;
+  }
+  .card footer {
+    margin-top: 70px;
+  }
+  .card1 footer {
+    margin-top: 80px;
+  }
+  .card h3 {
+    font-size: 24px;
+  }
+  .card1 h3 {
+    font-size: 24px;
+  }
+  .card .footer__2 {
+    margin-top: 110px;
+  }
+
 }

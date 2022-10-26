@@ -116,9 +116,30 @@ ul li select {
   color: #FFFFFF;
 }
 
+@media (min-width: 800px) {
+  .menu {
+    display: none;
+  }
+}
+
 
 @media (max-width: 400px) {
   nav ul {
     display: none;
+  }
+  .bucardor {
+    display: none;
+  }
+  .container__logo {
+    font-size: 24px;
+  }
+  .nav .container__logo .logo {
+    margin-left: 0;
+    background-color: aqua;
+  }
+  .menu {
+    color: white;
+    font-size: 30px;
+    margin: 20px;
   }
 }

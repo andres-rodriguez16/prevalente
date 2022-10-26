@@ -5,6 +5,9 @@ import cv from '../.././image/cv2.png';
 import ad from '../.././image/Administración.png';
 import s from './Navbar.module.css';
 import { HiSearch } from 'react-icons/hi';
+import { FiMenu } from "react-icons/fi";
+
+
 
 function Navbar() {
   return (
@@ -41,6 +44,9 @@ function Navbar() {
             </select>
           </li>
         </ul>
+        <section>
+        <FiMenu className={s.menu} />
+        </section>
       </nav>
     </div>
   );
