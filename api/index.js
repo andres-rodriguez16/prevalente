@@ -24,7 +24,7 @@ const {añadirALaDb} = require("./src/utils/Empresa")
 
 DB.sync({ force: true }).then(() => {
   añadirALaDb()
-  server.listen(process.env.PORT || 3001, () => {
+  server.listen(process.env.PGPORT || 3001, () => {
     console.log(`%s listening at ${process.env.PORT || 3001}`); // eslint-disable-line no-console
   });
 });
